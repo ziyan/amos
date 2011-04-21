@@ -1,0 +1,3 @@
+#!/bin/sh
+amosmapclient box 320109 320164 4727500 4727565 inf
+amosmapclient box 320111 320162 4727502 4727563 100

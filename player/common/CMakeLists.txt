@@ -1,0 +1,7 @@
+add_subdirectory (map)
+add_subdirectory (serial)
+add_subdirectory (crc)
+add_subdirectory (thread)
+add_subdirectory (astar)
+add_subdirectory (utm)
+add_subdirectory (timer)

@@ -1,0 +1,45 @@
+Compile
+=======
+Just run make, this creates a hidden directory called .build, and builds everything inside.
+
+Install
+=======
+sudo make install
+
+Run
+===
+player configs/amos/amos.cfg
+
+Directories
+===========
+cmake/			- cmake stuff, used to find modules at configuration time
+common/			-
+
+plugins/		- all the server-side plugin source
+plugins/base/		- encoder and actuator for AMOS, provides position2d interface, position1d interfaces
+			  for each individual motor, and power interfaces for each motor
+plugins/compass/	- compass driver
+plugins/md/		- magnetic declination driver, statically corrects compass heading based on geo location
+plugins/localize/	- localizer that fuses encoder, compass and gps data, no kalman filter yet
+plugins/camera/		- OpenCV based camera, provides camera interface
+plugins/mapper/		- mapper for elevation mapping using laser and vision mapping using camera
+plugins/cspace/		- grow probability map to convert workspace to configuration space
+plugins/planner/	- global planner, uses probability map, A* and TSP algorithm to find global path
+plugins/laserfusion/	- fuses multiple laser scans together
+
+clients/		- all the clients source
+clients/camviewer/	- a player camera image viewer
+
+License
+=======
+All source code copyrighted by their original author and contributors.
+
+Contributors
+============
+Ziyan Zhou
+James Letendre
+Alan Meekins
+Patrick Vidal
+Harry Chan
+Zachery Shivers
+
